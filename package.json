@@ -11,7 +11,8 @@
     "jest": "^27.5.1"
   },
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "watch": "jest --watchAll --verbose"
   },
   "dependencies": {
     "babel": "^6.23.0",

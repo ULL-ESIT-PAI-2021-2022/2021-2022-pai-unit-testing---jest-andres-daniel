@@ -1,0 +1,15 @@
+{
+  "YouTube": [
+    "https://www.youtube.com/watch?v=u6QfIXgjwGQ&t=64s",
+    "https://www.youtube.com/watch?v=Jv2uxzhPFl4"
+  ],
+  "Webpages": [
+    "dev.to/dstrekelj/how-to-write-unit-tests-in-javascript-with-jest-2e83",
+    "developerexperience.io/practices/unit-testing",
+    " jestjs.io/es-ES/docs/getting-started",
+    "marketplace.visualstudio.com/items?itemName=Orta.vscode-jest",
+    "www.softwaretestinghelp.com/jest-testing-tutorial/.",
+    "www.growin.com/blog/the-importance-of-testing-code/",
+    "www.xenonstack.com/insights/what-is-unit-testing"
+  ]
+}
