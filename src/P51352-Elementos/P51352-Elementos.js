@@ -26,7 +26,14 @@ const VICTORY_RULES = {
   'V': 'A',
 };
 
+/**
+ * Checks if the input is valid
+ *
+ * @param {Array} contendersArray
+ * @returns {boolean} if the input is accepted or not
+ */
 const verifyInput = function(contendersArray) {
+  if (!(contendersArray instanceof Array)) return false
   if (contendersArray.length != 2) return false;
   const allowed = Object.keys(VICTORY_RULES);
   for (let c of contendersArray) {
@@ -37,6 +44,13 @@ const verifyInput = function(contendersArray) {
   return true;
 };
 
+/**
+ * Returns the result of a battle between two contenders
+ *
+ * @param {String} contenderA
+ * @param {String} contenderB
+ * @returns {number, string} the result of the battle
+ */
 const resolveBattle = function(contenderA, contenderB) {
   if (VICTORY_RULES[contenderA] === contenderB) {
     return 1;
@@ -47,6 +61,13 @@ const resolveBattle = function(contenderA, contenderB) {
   }
 };
 
+/**
+ * Returns the result of a battle between two contenders after verifying the input
+ *
+ * @param {String} contenderA
+ * @param {String} contenderB
+ * @returns {number, string} the result of the battle
+ */
 const newElementalBattle = function(contenderA, contenderB) {
   if(!verifyInput([contenderA, contenderB])) throw new Error('Invalid input');
   return resolveBattle(contenderA, contenderB);

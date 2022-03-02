@@ -9,7 +9,7 @@ import {
   removeItemFromTop,
   removeItemAtBottom,
   checkSizeOfStack,
-} from './enchantments';
+} from '../../src/elyses-enchantments/enchantments.js';
 
 describe('pick a card', () => {
   test('get the first card', () => {
