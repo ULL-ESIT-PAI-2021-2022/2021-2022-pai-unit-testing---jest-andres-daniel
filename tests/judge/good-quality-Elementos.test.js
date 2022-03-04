@@ -12,7 +12,7 @@ describe('Input Verifier works correctly', () => {
     expect(elements.verifyInput([1, 'B'])).toBe(false);
     expect(elements.verifyInput([])).toBe(false);
     expect(elements.verifyInput()).toBe(false);
-    expect(elements.verifyInput(['a', 'b'])).toBe(false);
+    expect(elements.verifyInput(['a', 'v'])).toBe(false);
     expect(elements.verifyInput(['A', 'B', 'C'])).toBe(false);
     expect(elements.verifyInput(['A', 'B', 'A'])).toBe(false);
   });

@@ -11,7 +11,8 @@ describe('Matchers', () => {
     expect(`I am ${21} years old`).toBe('I am 21 years old');
     // Watch out for mutable types.
     expect({a: 1, b: 2}).not.toBe({a: 1, b: 2});
-    // Checks referential identities of objects. Is even stricter than ===.
+    // Checks referential identities of objects.
+    // Is even stricter than ===.
     let dummy = {a: 1, b: 2};
     expect(dummy).toBe(dummy);
 
@@ -45,13 +46,15 @@ describe('Matchers', () => {
   });
 
   test('Exceptions', () => {
-    // This is the function you want to test, it could be located elsewhere.
+    // This is the function you want to test,
+    // it could be located elsewhere.
     const testedFunction = function () {
       throw new EvalError('I am the best!');
     };
 
     // Necessary, so Jest can catch exceptions.
-    // Check out the docs: https://jestjs.io/docs/expect#tothrowerror
+    // Check out the docs:
+    // https://jestjs.io/docs/expect#tothrowerror
     const wrapper = function () {
       testedFunction();
     };
