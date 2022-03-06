@@ -10,14 +10,14 @@ describe('Matchers', () => {
     expect(5 % 2).not.toBe(0);
     expect(`I am ${21} years old`).toBe('I am 21 years old');
     // Watch out for mutable types.
-    expect({a: 1, b: 2}).not.toBe({a: 1, b: 2});
+    expect({name: 'Sam', age: 63}).not.toBe({name: 'Sam', age: 63});
     // Checks referential identities of objects.
     // Is even stricter than ===.
-    let dummy = {a: 1, b: 2};
-    expect(dummy).toBe(dummy);
+    let person = {name: 'Tom', age: 20};
+    expect(person).toBe(person);
 
     // Compares the content and type. Works the same as ===.
-    expect({a: 1, b: 2}).toEqual({a: 1, b: 2});
+    expect({name: 'Sam', age: 63}).toEqual({name: 'Sam', age: 63});
 
     // Watch out for floating point rounding.
     expect(0.1 + 0.2).not.toBe(0.3);
@@ -30,10 +30,10 @@ describe('Matchers', () => {
   });
 
   test('Null and Undefined', () => {
-    let dummy = {a: 1, b: 2};
-    expect(dummy).toBeDefined();
-    expect(dummy).toHaveProperty('a');
-    expect(dummy.unknown).toBeUndefined();
+    let person = {name: 'Tom', age: 20};
+    expect(person).toBeDefined();
+    expect(person).toHaveProperty('name');
+    expect(person.unknown).toBeUndefined();
 
     expect('something').toBeTruthy();
     expect('').toBeFalsy();

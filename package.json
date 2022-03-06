@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "jest --verbose",
-    "watch": "jest --watchAll --verbose"
+    "watch": "jest --watchAll --verbose",
+    "coverage": "jest --coverage --verbose"
   },
   "dependencies": {
     "babel": "^6.23.0",
